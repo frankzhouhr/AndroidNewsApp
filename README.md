@@ -11,3 +11,5 @@ Project Highlights
 - Built the Room Database with LiveData and ViewModel to support local cache and offline model
 - Implemented the bottom bar and page navigation using JetPack navigation component
 
+![alt-text-1](https://static.wixstatic.com/media/6cc2c6_36576222056744dfbbb5468300dfa202~mv2.png/v1/fill/w_328,h_111,al_c,lg_1,q_85/Screen%20Shot%202020-07-07%20at%2012_37_19%20AM_pn.webp)
+
