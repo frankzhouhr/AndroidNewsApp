@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.newsapp.news.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_detail"
+            app:destination="@id/navigation_detail">
+            <argument
+                android:name="article"
+                android:defaultValue="@null"
+                app:argType="com.newsapp.news.model.Article"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.newsapp.news.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_detail"
+            app:destination="@id/navigation_detail">
+            <argument
+                android:name="article"
+                android:defaultValue="@null"
+                app:argType="com.newsapp.news.model.Article"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.newsapp.news.ui.detail.NewsDetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="article"
+            android:defaultValue="@null"
+            app:argType="com.newsapp.news.model.Article"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
